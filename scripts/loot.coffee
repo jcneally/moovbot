@@ -18,5 +18,4 @@ module.exports = (robot) ->
     robot.http("http://donjon.bin.sh/d20/random/rpc.cgi?type=Purse&n=1")
       .get() (err, res, body) ->
         response = JSON.parse(body)
-          if response.success == "true"
-            msg.send response[0]
+        msg.send response
