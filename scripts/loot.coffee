@@ -15,14 +15,8 @@
 
 module.exports = (robot) ->
   robot.respond /loot the room/i, (msg) ->
-    data = JSON.stringify({
-      type: 'Purse',
-      n: 10
-    })
-    robot.http("http://donjon.bin.sh/d20/random/#purse")
-      .post(data) (err, res, body) ->
-        matches = body.match /<div id="out".*<li>(.*?)<\/li>/i
-
-        if matches and matches[1]
-          msg.send matches[1]
-
+    robot.http("http://donjon.bin.sh/d20/random/rpc.cgi?type=Purse&n=1")
+      .get() (err, res, body) ->
+        response = JSON.parse(body)
+          if response.success == "true"
+            msg.send response[0]
