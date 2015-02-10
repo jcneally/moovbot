@@ -5,7 +5,7 @@ module.exports = (robot) ->
 
   robot.router.post "/stagingdeploy", (req, res) ->
     #room   = req.params.room
-    #data   = JSON.parse req.body.payload
+    data   = JSON.parse req.body.payload
     #sha    = data.sha
 
     user = "17214_1083165@chat.hipchat.com"
