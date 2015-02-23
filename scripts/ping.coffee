@@ -22,4 +22,3 @@ module.exports = (robot) ->
 
   robot.respond /DIE$/i, (msg) ->
     msg.send "I can't let you do that Starfox."
-
