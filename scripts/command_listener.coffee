@@ -21,3 +21,7 @@ module.exports = (robot) ->
        res.end "message sent"
     catch error
       console.log "message-listner error: #{error}."
+
+   robot.router.get "/set_rooms", (req, res) ->
+     test = "Hello World"
+     res.end test
