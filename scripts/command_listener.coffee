@@ -24,7 +24,11 @@ module.exports = (robot) ->
       console.log "message-listner error: #{error}."
 
    robot.router.get "/set_rooms", (req, res) ->
-     response = ->
-       fs.readFileSync "set_rooms.html", 'utf8'
-     res.write response()
-     res.end
+     fs.readFile 'index.html', (error, content) ->
+      if error
+        res.writeHead 500
+        res.end error
+      else
+        res.writeHead 200,
+          'Content-Type': 'text/html'
+        res.end content, 'utf-8'
