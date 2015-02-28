@@ -26,4 +26,5 @@ module.exports = (robot) ->
    robot.router.get "/set_rooms", (req, res) ->
      response = ->
        fs.readFileSync "set_rooms.html", 'utf8'
-     res.end response()
+     res.write response()
+     res.end
