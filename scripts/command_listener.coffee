@@ -1,4 +1,5 @@
 url = require('url')
+fs = require('fs')
 querystring = require('querystring')
 
 module.exports = (robot) ->
@@ -23,5 +24,6 @@ module.exports = (robot) ->
       console.log "message-listner error: #{error}."
 
    robot.router.get "/set_rooms", (req, res) ->
-     test = "Hello World"
-     res.end test
+     response = ->
+       fs.readFileSync "../set_rooms.html", 'utf8'
+     res.end response
