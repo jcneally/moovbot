@@ -25,10 +25,10 @@ module.exports = (robot) ->
 
    robot.router.get "/set_rooms", (req, res) ->
      fs.readFile 'index.html', (error, content) ->
-     if error
-       res.writeHead 500
-       res.end error
-     else
-       res.writeHead 200,
-         'Content-Type': 'text/html'
-       res.end content, 'utf-8'
+       if error
+         res.writeHead 500
+         res.end error
+       else
+         res.writeHead 200,
+           'Content-Type': 'text/html'
+         res.end content, 'utf-8'
