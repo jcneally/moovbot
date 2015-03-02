@@ -25,4 +25,4 @@ module.exports = (robot) ->
 
    robot.router.get "/set_rooms", (req, res) ->
      fs.readFile 'set_rooms.html', (error, content) ->
-       res.status(200).send(content)
+       res.status(200).send(new Buffer(content))
