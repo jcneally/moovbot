@@ -31,4 +31,4 @@ module.exports = (robot) ->
        else
          res.writeHead 200,
            'Content-Type': 'text/html'
-         res.end content, 'utf-8'
+         res.send content
