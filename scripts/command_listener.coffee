@@ -24,4 +24,5 @@ module.exports = (robot) ->
       console.log "message-listner error: #{error}."
 
    robot.router.get "/set_rooms", (req, res) ->
-     res.status(200).sendFile("index.html")
+     fs.readFile 'index.html', (error, content) ->
+       res.status(200).send(content)
