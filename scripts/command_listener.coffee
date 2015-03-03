@@ -46,5 +46,5 @@ module.exports = (robot) ->
     room_name = data.room_name
     rooms_to_message[proj_name] = room_name
     save_rooms(robot)
-    res.end
+    window.location.href = "/set_rooms"
     #res.sendfile("set_rooms.html")
