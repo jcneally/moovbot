@@ -1,10 +1,19 @@
 <!DOCTYPE>
 <html>
-<head>
-</head>
+  <head>
+  </head>
 
-<body>
-<h1> Hello World! </h1>
-</body>
+  <body>
+    <h1> Which rooms would you like Moovbot to inform deployments?</h1>
+    <form action="/set_rooms">
+      Project name (e.g, "moovweb/charlotterusse-prod")
+      <input type="text" name="proj_name" />
+      <br/>
+      Room name (e.g., "qa_team")
+      <input type="text" name="room_name" />
+      <br/>
+      <input type="submit" />
+    </form>
+  </body>
 
 </html>
