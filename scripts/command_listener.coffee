@@ -21,10 +21,13 @@ module.exports = (robot) ->
     mode      = data.proj_mode
     room_name = rooms_to_message[name]
 
+    room = "17214_" + room_name + "@conf.hipchat.com"
+
+    console.log("trying to message: " + room)
+
+
     unless room_name
       res.end
-
-    room = "17214_" + room_name + "@conf.hipchat.com"
 
     try
        robot.messageRoom room, "Deployment finished for " + name + " on " + mode + " :\n" + commitmsg + "\n"  + sha
