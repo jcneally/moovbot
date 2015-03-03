@@ -24,9 +24,10 @@ module.exports = (robot) ->
     room = "17214_" + room_name + "@conf.hipchat.com"
 
     console.log("trying to message: " + room)
+    console.log("rooms: " + rooms_to_message)
 
 
-    unless room_name
+    unless room_name?
       res.end
 
     try
