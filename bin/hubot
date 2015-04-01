@@ -6,7 +6,7 @@ export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 export HUBOT_HIPCHAT_JID=17214_1297130@chat.hipchat.com
 export HUBOT_HIPCHAT_PASSWORD=moovbot
 export HUBOT_LOG_LEVEL=debug
-export HUBOT_HIPCHAT_ROOMS=17214_ems@conf.hipchat.com,17214_qa@conf.hipchat.com,17214_moovbot_room@conf.hipchat.com,17214_lunch_room@conf.hipchat.com,17214_forever21@conf.hipchat.com,17214_mtg_room@conf.hipchat.com,17214_dd@conf.hipchat.com,17214_social@conf.hipchat.com
+export HUBOT_HIPCHAT_ROOMS=17214_leica@conf.hipchat.com,17214_ems@conf.hipchat.com,17214_qa@conf.hipchat.com,17214_moovbot_room@conf.hipchat.com,17214_lunch_room@conf.hipchat.com,17214_forever21@conf.hipchat.com,17214_mtg_room@conf.hipchat.com,17214_dd@conf.hipchat.com,17214_social@conf.hipchat.com
 
 exec node_modules/.bin/hubot "$@"
 
